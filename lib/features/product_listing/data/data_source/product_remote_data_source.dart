@@ -1,4 +1,5 @@
-// ignore_for_file: one_member_abstracts, inference_failure_on_function_invocation
+// ignore_for_file: one_member_abstracts
+//ignore_for_file: inference_failure_on_function_invocation
 
 import 'package:dio/dio.dart';
 import 'package:flutter_tdd_clean_bloc/config/path/product_api_path.dart';

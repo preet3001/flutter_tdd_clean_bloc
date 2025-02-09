@@ -1,3 +1,5 @@
+// ignore_for_file: inference_failure_on_function_invocation
+
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
@@ -19,7 +21,7 @@ void main() {
     productRemoteDataSource = ProductRemoteDataSourceImpl(mockDio);
   });
 
-  final ProductModel tProductModel =
+  const ProductModel tProductModel =
       ProductModel(title: 'test', description: 'test', price: 0, thumbnail: '');
 
   test('should Return ProductModel ', () async {
