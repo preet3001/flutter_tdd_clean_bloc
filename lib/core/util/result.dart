@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:flutter_tdd_clean_bloc/core/error/failure.dart';
+
 /// Utility class to wrap result data
 ///
 /// Evaluate the result using a switch statement:
@@ -22,7 +24,7 @@ sealed class Result<T> {
   const factory Result.ok(T value) = Ok._;
 
   /// Creates an error [Result], completed with the specified [error].
-  const factory Result.error(Exception error) = Error._;
+  const factory Result.error(Failure error) = Error._;
 }
 
 /// Subclass of Result for values
@@ -41,7 +43,7 @@ final class Error<T> extends Result<T> {
   const Error._(this.error);
 
   /// Returned error in result
-  final Exception error;
+  final Failure error;
 
   @override
   String toString() => 'Result<$T>.error($error)';
