@@ -1,3 +1,3 @@
 class BaseApiUrl {
-  final productBaseUrl = 'https://dummyjson.com/';
+  static const productBaseUrl = 'https://dummyjson.com/';
 }
