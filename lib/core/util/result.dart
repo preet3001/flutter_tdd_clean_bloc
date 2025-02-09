@@ -48,3 +48,12 @@ final class Error<T> extends Result<T> {
   @override
   String toString() => 'Result<$T>.error($error)';
 }
+
+extension ResultCast<T> on Result<T> {
+  /// Convenience method to cast to Ok
+  Ok<T> get asOk => this as Ok<T>;
+
+  /// Convenience method to cast to Error
+  // ignore: strict_raw_type
+  Error get asError => this as Error<T>;
+}
