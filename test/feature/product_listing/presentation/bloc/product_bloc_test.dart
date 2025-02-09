@@ -1,4 +1,3 @@
-import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_tdd_clean_bloc/core/usecase/usecase.dart';
 import 'package:flutter_tdd_clean_bloc/core/util/result.dart';
 import 'package:flutter_tdd_clean_bloc/features/product_listing/domain/entities/product_entity.dart';
