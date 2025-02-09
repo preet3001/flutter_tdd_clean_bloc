@@ -1,5 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_tdd_clean_bloc/features/product_listing/domain/usecases/get_products.dart';
+import 'package:flutter_tdd_clean_bloc/features/product_listing/presentation/bloc/product_bloc.dart';
 import 'package:flutter_tdd_clean_bloc/features/product_listing/presentation/bloc/product_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -15,7 +16,7 @@ void main() {
   });
   group('ProductBloc', () {
     test('InitialState', () {
-      expect(productBloc.initialState, ProductInitialState());
+      expect(productBloc.state, ProductInitialState());
     });
   });
 }
