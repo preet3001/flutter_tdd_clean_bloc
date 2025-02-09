@@ -13,20 +13,23 @@ void main() {
     price: 0,
     thumbnail: '',
   );
-  test('should be of ProductEntity type', () {
-    expect(tModel, isA<ProductEntity>());
-  });
-  test('Product Model fromJson', () {
-    final data = json.decode(fixture('products.json')) as Map<String, dynamic>;
-    const expected = ProductModel(
-      title: 'test',
-      description: 'test',
-      price: 0,
-      thumbnail: '',
-    );
+  group('ProductModel test', () {
+    test('should be of ProductEntity type', () {
+      expect(tModel, isA<ProductEntity>());
+    });
+    test('Product Model fromJson', () {
+      final data =
+          json.decode(fixture('products.json')) as Map<String, dynamic>;
+      const expected = ProductModel(
+        title: 'test',
+        description: 'test',
+        price: 0,
+        thumbnail: '',
+      );
 
-    final actual = ProductModel.fromJson(data);
+      final actual = ProductModel.fromJson(data);
 
-    expect(actual, expected);
+      expect(actual, expected);
+    });
   });
 }
