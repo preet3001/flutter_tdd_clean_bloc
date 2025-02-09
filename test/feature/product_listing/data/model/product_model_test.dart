@@ -16,13 +16,17 @@ void main() {
   test('should be of ProductEntity type', () {
     expect(tModel, isA<ProductEntity>());
   });
-  group('Product Model fromJson', () {
-    final data = json.decode(fixture('products.json'));
+  test('Product Model fromJson', () {
+    final data = json.decode(fixture('products.json')) as Map<String, dynamic>;
     const expected = ProductModel(
       title: 'test',
       description: 'test',
       price: 0,
       thumbnail: '',
     );
+
+    final actual = ProductModel.fromJson(data);
+
+    expect(actual, expected);
   });
 }
