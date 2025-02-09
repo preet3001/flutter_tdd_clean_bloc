@@ -1,6 +1,8 @@
 {
     "@@locale": "en",
     "counterAppBarTitle": "Counter",
+    "price": "Price",
+    "noDataFound": "No Data Found",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
     }

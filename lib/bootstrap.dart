@@ -28,7 +28,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
 
   Bloc.observer = const AppBlocObserver();
 
-  initServiceLocator();
+  await initServiceLocator();
 
   // Add cross-flavor configuration here
 

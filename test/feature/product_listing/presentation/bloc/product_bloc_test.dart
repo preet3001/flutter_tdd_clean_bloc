@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:async';
 
 import 'package:flutter_tdd_clean_bloc/core/usecase/usecase.dart';
 import 'package:flutter_tdd_clean_bloc/core/util/result.dart';
@@ -50,7 +50,7 @@ void main() {
         ProductLoadingState(),
         const ProductCompletedState(tProduct),
       ];
-      expectLater(productBloc.stream, emitsInOrder(expected));
+      unawaited(expectLater(productBloc.stream, emitsInOrder(expected)));
       productBloc.add(FetchProduct());
     });
   });
