@@ -3,7 +3,6 @@ import 'package:flutter_tdd_clean_bloc/features/product_listing/data/data_source
 import 'package:flutter_tdd_clean_bloc/features/product_listing/data/models/product_model.dart';
 import 'package:flutter_tdd_clean_bloc/features/product_listing/data/repositories/product_repository_impl.dart';
 import 'package:flutter_tdd_clean_bloc/features/product_listing/domain/entities/product_entity.dart';
-import 'package:flutter_tdd_clean_bloc/features/product_listing/domain/repositories/product_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
