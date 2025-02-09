@@ -1,3 +1,3 @@
 class ProductApiPath {
-  final getProducts = 'products/';
+  static const getProducts = 'products/';
 }
